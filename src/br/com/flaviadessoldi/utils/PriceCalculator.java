@@ -20,7 +20,7 @@ public class PriceCalculator {
 		return null;
 	}
 
-	public  String getBestPriceHotel (String clientType, List<Date> bookingDates,
+	public  String getBestPriceHotel (String clientType, Date initialDate, Date finalDate,
 		List<Hotel> hotels) {
 	
 	DateGenerator dateGenerator = new DateGenerator();

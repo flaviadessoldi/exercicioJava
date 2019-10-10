@@ -1,5 +1,7 @@
 package br.com.flaviadessoldi.domain;
 
+import java.util.ArrayList;
+
 public class Hotel {
 	
 	private String name;
@@ -109,6 +111,8 @@ public class Hotel {
 			return false;
 		return true;
 	}
+	
+	
 	
 
 }
