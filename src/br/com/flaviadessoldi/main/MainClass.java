@@ -13,50 +13,38 @@ import br.com.flaviadessoldi.utils.DateGenerator;
 import br.com.flaviadessoldi.utils.PriceCalculator;
 
 public class MainClass {
-	
+
 	public static void main(String[] args) {
-		
+
 		List<Hotel> hotels = new ArrayList<Hotel>();
 		hotels.add(new Hotel("The Carlyle", 3, 110d, 80d, 90d, 80d));
 		hotels.add(new Hotel("The Plaza", 4, 160d, 110d, 60d, 50d));
 		hotels.add(new Hotel("Royal Hotel", 5, 220d, 100d, 150d, 40d));
-	
-	String clientType = input("Please, tell us, are you a regular or reward client? (regular/reward)");
-	String inputCheckin = input("Tell us your checkin date (DD/MM/YYYY)");
-	String inputCheckout = input("Now, tell us your checkout date  (DD/MM/YYYY)");
 
-	DateGenerator dateGenerator = new DateGenerator();
-	Date checkinDate = dateGenerator.toDate(inputCheckin);
-	Date checkoutDate = dateGenerator.toDate(inputCheckout);
+		String clientType = input("Please, tell us, are you a regular or reward client? (regular/reward)");
+		String inputCheckin = input("Tell us your checkin date (DD/MM/YYYY)");
+		String inputCheckout = input("Now, tell us your checkout date  (DD/MM/YYYY)");
 
-	PriceCalculator priceCalculator = new PriceCalculator();
-	String bestPrice = priceCalculator.getBestPriceHotel(clientType, checkinDate, checkoutDate, hotels);
-	System.out.println("The best rate you got on these dates was at: " + bestPrice);
-	
-}
+		DateGenerator dateGenerator = new DateGenerator();
+		Date checkinDate = dateGenerator.toDate(inputCheckin);
+		Date checkoutDate = dateGenerator.toDate(inputCheckout);
+
+		PriceCalculator priceCalculator = new PriceCalculator();
+		String bestPrice = priceCalculator.getBestPriceHotel(clientType, checkinDate, checkoutDate, hotels);
+		System.out.println("The best rate you got on these dates was at: " + bestPrice);
+
+	}
 
 	private static String input(String info) {
-	System.out.print(info + " ");
-	try {
-		BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-		String s = bufferRead.readLine();
-		return s;
-	} catch (IOException e) {
-		e.printStackTrace();
+		System.out.print(info + " ");
+		try {
+			BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+			String s = bufferRead.readLine();
+			return s;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
-	return null;
-}
-	
-	
-
-
 
 }
-
-
-
-
-
-
-
-
