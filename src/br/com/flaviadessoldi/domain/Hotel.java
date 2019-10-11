@@ -1,9 +1,7 @@
 package br.com.flaviadessoldi.domain;
 
-import java.util.ArrayList;
-
 public class Hotel {
-	
+		
 	private String name;
 	private int classification;
 	private double businessDayRegular;
@@ -11,13 +9,8 @@ public class Hotel {
 	private double weekendRegular;
 	private double weekendReward;
 	
-	public Hotel() {
-		
-	}
-	
 	public Hotel(String name, int classification, double businessDayRegular, double businessDayReward,
 			double weekendRegular, double weekendReward) {
-		super();
 		this.name = name;
 		this.classification = classification;
 		this.businessDayRegular = businessDayRegular;
@@ -25,6 +18,7 @@ public class Hotel {
 		this.weekendRegular = weekendRegular;
 		this.weekendReward = weekendReward;
 	}
+	
 	public String getName() {
 		return name;
 	}

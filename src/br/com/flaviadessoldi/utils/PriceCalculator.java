@@ -3,13 +3,12 @@ package br.com.flaviadessoldi.utils;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import br.com.flaviadessoldi.domain.Hotel;
-import br.com.flaviadessoldi.domain.Price;
+
 
 public class PriceCalculator {
 
-	private Hotel getHotelByName(String name, List<Hotel> hotels) {
+	private static Hotel getHotelByName(String name, List<Hotel> hotels) {
 		for (Hotel hotel : hotels) {
 			if (hotel.getName().equals(name)) {
 				return hotel;
@@ -18,7 +17,7 @@ public class PriceCalculator {
 		return null;
 	}
 
-	public String getBestPriceHotel(String clientType, Date initialDate, Date finalDate, List<Hotel> hotels) {
+	public static String getBestPriceHotel(String clientType, Date initialDate, Date finalDate, List<Hotel> hotels) {
 
 		DateGenerator dateGenerator = new DateGenerator();
 
