@@ -44,9 +44,7 @@ class PriceCalculatorTest {
 	@Test
 	public void ifItWorksMustReturnRidgewood() throws ParseException {
 
-		List<Hotel> mockHoteis;
-
-		mockHoteis = new ArrayList<Hotel>();
+		List<Hotel> mockHoteis= new ArrayList<Hotel>();
 		mockHoteis.add(new Hotel("Lakewood", 3, 110d, 80d, 90d, 80d));
 		mockHoteis.add(new Hotel("Bridgewood", 4, 160d, 110d, 60d, 50d));
 		mockHoteis.add(new Hotel("Ridgewood", 5, 220d, 100d, 150d, 40d));
