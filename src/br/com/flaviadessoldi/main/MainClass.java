@@ -1,6 +1,7 @@
 package br.com.flaviadessoldi.main;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -14,6 +15,8 @@ import br.com.flaviadessoldi.utils.PriceCalculator;
 public class MainClass {
 	
 	public static void main(String[] args) {
+		
+	
 
 		List<Hotel> hotels = new ArrayList<Hotel>();
 		hotels.add(new Hotel("Lakewood", 3, 110d, 80d, 90d, 80d));

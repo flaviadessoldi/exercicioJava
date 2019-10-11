@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class FileReaderAndConverter {
 	
-	public static void main(String[] args) throws FileNotFoundException, IOException {
+	public void ReaderAndConverterFileTxt () {
 
 		try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
 			String line = br.readLine();
@@ -20,18 +20,21 @@ public class FileReaderAndConverter {
 			String secondDate = cutDates[1];
 			String thirdDate = cutDates[2];
 			
-//			String takeDate [] = cleanDates.split("(");
-//			String finalDate= takeDate[0];
-//			
+			
 			System.out.println(firstDate);
 			System.out.println(secondDate);
 			System.out.println(thirdDate);
 			System.out.println(clientType);
 			
-			
-			
-
+		
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		
 
 	}
 
