@@ -34,7 +34,7 @@ class PriceCalculatorTest {
 
 		String hotelCorrect = "Bridgewood";
 
-		String client = "regular";
+		String client = "Regular";
 
 		String result = PriceCalculator.getBestPriceHotel(client, checkinDate, checkoutDate, mockHoteis);
 
@@ -54,7 +54,7 @@ class PriceCalculatorTest {
 
 		String hotelCorrect = "Ridgewood";
 
-		String client = "reward";
+		String client = "Rewards";
 
 		String result = PriceCalculator.getBestPriceHotel(client, checkinDate, checkoutDate, mockHoteis);
 

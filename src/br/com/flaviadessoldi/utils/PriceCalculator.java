@@ -29,13 +29,13 @@ public class PriceCalculator {
 		for (Hotel hotel : hotels) {
 			int s = 0;
 			for (Date date : dates) {
-				if (clientType.equals("regular")) {
+				if (clientType.equals("Regular")) {
 					if (dateGenerator.isWeekend(date)) {
 						s += hotel.getWeekendRegular();
 					} else {
 						s += hotel.getBusinessDayRegular();
 					}
-				} else if (clientType.equals("rewards")) {
+				} else if (clientType.equals("Rewards")) {
 					if (dateGenerator.isWeekend(date)) {
 						s += hotel.getWeekendReward();
 					} else {
