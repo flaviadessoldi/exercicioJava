@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 import br.com.flaviadessoldi.domain.Hotel;
 
-
 public class PriceCalculator {
 
 	private static Hotel getHotelByName(String name, List<Hotel> hotels) {

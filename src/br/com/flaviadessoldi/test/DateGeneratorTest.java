@@ -17,14 +17,14 @@ class DateGeneratorTest {
 	@Test
 	public void mustReturnTrueIfItsWeekend() throws Exception {
 		
-		Date date = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse("12/10/2019");
+		Date date = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH).parse("12/10/2019");
 		assertTrue(dateGenerator.isWeekend(date));
 	}
 	
 	@Test
 	public void mustReturnFalseIfItsBusinessDay() throws Exception {
 		
-		Date date = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse("15/10/2019");
+		Date date = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH).parse("15/10/2019");
 		assertFalse(dateGenerator.isWeekend(date));
 	}
 }

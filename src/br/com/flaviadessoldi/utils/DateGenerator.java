@@ -37,7 +37,7 @@ public class DateGenerator {
 
 	public Date formatDate(String dateString) {
 		try {
-			Date date = new SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH).parse(dateString);
+			Date date = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH).parse(dateString);
 			return date;
 		} catch (ParseException e) {
 			e.printStackTrace();
