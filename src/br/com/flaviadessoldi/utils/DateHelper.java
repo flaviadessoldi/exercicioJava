@@ -15,7 +15,7 @@ import java.util.Locale;
  * @author Flavia Giovana Dessoldi
  */
 
-public class DateGenerator {
+public class DateHelper {
 
 	public boolean isWeekend(Date date) {
 		Calendar calendar = Calendar.getInstance();

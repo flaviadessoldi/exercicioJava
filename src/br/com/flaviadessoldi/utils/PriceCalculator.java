@@ -24,7 +24,7 @@ public class PriceCalculator {
 
 	public static String getBestPriceHotel(String clientType, Date initialDate, Date finalDate, List<Hotel> hotels) {
 
-		DateGenerator dateGenerator = new DateGenerator();
+		DateHelper dateGenerator = new DateHelper();
 
 		List<Date> dates = (ArrayList<Date>) dateGenerator.getDates(initialDate, finalDate);
 

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import br.com.flaviadessoldi.domain.Hotel;
 import br.com.flaviadessoldi.utils.PriceCalculator;

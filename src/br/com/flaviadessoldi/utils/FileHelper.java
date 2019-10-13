@@ -10,11 +10,11 @@ import java.io.IOException;
  * @author Flavia Giovana Dessoldi
  */
 
-public class FileReaderAndConverter {
+public class FileHelper {
 
-	public static String ReadAndConverterStrings() throws IOException {
+	public static String readFile(String filePath) throws IOException {
 
-		try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
 			String line = br.readLine();
 
 			return line;
@@ -22,20 +22,25 @@ public class FileReaderAndConverter {
 		}
 
 	}
-
-	public String takeClientType() throws IOException {
-		String line = ReadAndConverterStrings();
-		String[] parts = line.split(":");
+	
+	
+	public String takeClientType(String content) throws IOException {
+		String[] parts = content.split(":");
 		String clientType = parts[0];
 
 		return clientType;
 	}
-
-	public String takeCheckinDate() throws IOException {
-		String dates = ReadAndConverterStrings();
-		String[] parts = dates.split(":");
+	
+	private String[] getStringDate(String content){
+		String[] parts = content.split(":");
 		String date = parts[1];
 		String[] cutDates = date.split(",");
+
+		return cutDates;
+	}
+
+	public String takeCheckinDate(String content) throws IOException {
+		String[] cutDates = getStringDate(content);
 		String firstDate = cutDates[0];
 		String convertDate = firstDate.substring(1, 10);
 
@@ -48,11 +53,8 @@ public class FileReaderAndConverter {
 
 	}
 
-	public String takeCheckoutDate() throws IOException {
-		String dates = ReadAndConverterStrings();
-		String[] parts = dates.split(":");
-		String date = parts[1];
-		String[] cutDates = date.split(",");
+	public String takeCheckoutDate(String content) throws IOException {
+		String[] cutDates = getStringDate(content);
 		String lastDate = cutDates[cutDates.length - 1];
 		String convertDate = lastDate.substring(1, 10);
 
@@ -62,7 +64,6 @@ public class FileReaderAndConverter {
 
 		String checkoutDate = sb.toString();
 		return checkoutDate;
-
 	}
 
 }
