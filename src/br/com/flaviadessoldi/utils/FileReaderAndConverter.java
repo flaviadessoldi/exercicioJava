@@ -4,6 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Class responsible for receiving and converting the text file information.
+ * 
+ * @author Flavia Giovana Dessoldi
+ */
+
 public class FileReaderAndConverter {
 
 	public static String ReadAndConverterStrings() throws IOException {

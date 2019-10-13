@@ -1,14 +1,17 @@
 package br.com.flaviadessoldi.test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
 import org.junit.jupiter.api.Test;
-
 import br.com.flaviadessoldi.utils.DateGenerator;
+
+/**
+ * Class responsible for testing the methods of the class DateGenerator.
+ * 
+ * @author Flavia Giovana Dessoldi
+ */
 
 class DateGeneratorTest {
 	

@@ -1,5 +1,11 @@
 package br.com.flaviadessoldi.domain;
 
+/**
+ * Class responsible for creating the Hotel entity.
+ * 
+ * @author Flavia Giovana Dessoldi
+ */
+
 public class Hotel {
 		
 	private String name;

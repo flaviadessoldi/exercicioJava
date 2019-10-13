@@ -9,6 +9,12 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Class responsible for converting date format and weekend check.
+ * 
+ * @author Flavia Giovana Dessoldi
+ */
+
 public class DateGenerator {
 
 	public boolean isWeekend(Date date) {

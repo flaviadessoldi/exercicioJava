@@ -12,12 +12,15 @@ import org.junit.jupiter.api.Test;
 import br.com.flaviadessoldi.domain.Hotel;
 import br.com.flaviadessoldi.utils.PriceCalculator;
 
+/**
+ * Class responsible for testing the methods of the class PriceCalculator.
+ * 
+ * @author Flavia Giovana Dessoldi
+ */
+
 class PriceCalculatorTest {
 
-	@BeforeEach
-	public void setup() {
-		PriceCalculator priceCalculator = new PriceCalculator();
-	}
+
 
 	@Test
 	public void ifItWorksMustReturnBridgewood() throws ParseException {

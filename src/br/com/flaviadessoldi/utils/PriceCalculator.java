@@ -5,6 +5,12 @@ import java.util.Date;
 import java.util.List;
 import br.com.flaviadessoldi.domain.Hotel;
 
+/**
+ * Class responsible for calculating the best rates.
+ * 
+ * @author Flavia Giovana Dessoldi
+ */
+
 public class PriceCalculator {
 
 	private static Hotel getHotelByName(String name, List<Hotel> hotels) {
